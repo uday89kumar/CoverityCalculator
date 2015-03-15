@@ -1,4 +1,4 @@
-##########################################################
+﻿##########################################################
 Report
 ##########################################################
 Some of the issues I encountered while approaching this problem were as follows:
@@ -10,6 +10,15 @@ Some of the issues I encountered while approaching this problem were as follows:
 6.	Another interesting issue was regarding negative numbers. Had to add additional condition for the same.
 ##########################################################
 Build Notes:
+Open command prompt navigate to the respective file location and type the following command
+C:\User\Desktop\..\Coverity_Calculator> java -jar Calculator.jar
+Expression> add(10,29)
+Output = 39
+Expression> let(a,let(b,5,add(b,10)),mult(a,div(10,2)))
+Output = 75
+Expression> quit
+
+Note: Type quit to exit the application.
 ##########################################################
 Source File:
 •	src/main/java/com/Calculator.java
