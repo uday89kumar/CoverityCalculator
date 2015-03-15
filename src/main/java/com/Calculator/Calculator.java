@@ -142,13 +142,15 @@ public class Calculator {
 	 * Determine if the expression has equal number of parenthesis
 	 * @Params : String str - Expression to evaluate
 	*/
-	private static boolean validateExpression(String str){
+	public static boolean validateExpression(String str){
+		//Assuming last character will always be ')'
 		Stack<String> parenthesis = new Stack<String>();
 		for (int i = 0; i < str.length(); i++) {
 			if (str.charAt(i) == '(') {
 				parenthesis.push("X"); 
 			} 
 			else if (str.charAt(i) == ')') {
+				if(!parenthesis.isEmpty())
 				parenthesis.pop();
 			}		    
 		}
@@ -159,7 +161,7 @@ public class Calculator {
 	 * Extracting the sub parameters
 	 * @Params : String input - Expression to be parsed
 	 */
-	private static List<String> extractLetParameters(String input) {
+	public static List<String> extractLetParameters(String input) {
 		try{
 			List<String> parameters = new ArrayList<String>();		
 
@@ -229,7 +231,7 @@ public class Calculator {
 	 * @Params input - The expression which will be evaluated
 	 * @Params myStack - The stack with the operation and operands
 	 */
-	private static String computeExpression(String input, Stack<String> myStack) {
+	public static String computeExpression(String input, Stack<String> myStack) {
 		String error = "";
 		try{
 			logger.debug("Stack : " + myStack.toString());
