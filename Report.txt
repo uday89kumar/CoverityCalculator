@@ -1,0 +1,24 @@
+##########################################################
+Report
+##########################################################
+Some of the issues I encountered while approaching this problem were as follows:
+1.	Building Maven project. I haven’t developed a maven project before this, and had to understand the idea behind Maven.
+2.	The problem was unique in the sense, it had a LET expression. Which required some additional thinking. (Recursive calls)
+3.	Boundary condition checks. Since the application will take only integer values. Any value not in the range {Integer.MIN_VALUE …. Integer.MAX_VALUE} were immediately rejected.
+4.	Checking for the expression integrity. Parenthesis should be balanced.
+5.	Only integer values were allowed in the calculator. Removed decimal points.
+6.	Another interesting issue was regarding negative numbers. Had to add additional condition for the same.
+##########################################################
+Build Notes:
+##########################################################
+Source File:
+•	src/main/java/com/Calculator.java
+•	src/main/java/com/CalculatorTest.java - Junit Testing
+##########################################################
+Time spent:
+##########################################################
+Calculator.java – 3hrs:30mins
+CalculatorTest.java – 30mins.
+Some improvement can be done on the unit testing. With more testing case performed on it.
+
+
